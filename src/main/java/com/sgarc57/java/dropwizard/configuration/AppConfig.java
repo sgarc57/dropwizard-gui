@@ -1,8 +1,10 @@
-package com.sgarc57.java.dropwizard;
+package com.sgarc57.java.dropwizard.configuration;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
-import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.NotEmpty;
+
 
 public class AppConfig extends Configuration {
     @NotEmpty

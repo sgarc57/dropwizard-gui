@@ -1,5 +1,6 @@
 package com.sgarc57.java.dropwizard;
 
+import com.sgarc57.java.dropwizard.configuration.AppConfig;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
@@ -7,14 +8,12 @@ import io.dropwizard.setup.Environment;
 import com.sgarc57.java.dropwizard.health.TemplateHealthCheck;
 import com.sgarc57.java.dropwizard.resources.HelloWorldResource;
 
-/**
- * Hello world!
- */
+
 public class MainApplication extends Application<AppConfig> {
 
     public static void main(String[] args) throws Exception {
         if (args.length < 2) {
-            new MainApplication().run(new String[]{"server", "config.yml"});
+            new MainApplication().run("server", "config/config.yaml");
         } else {
             new MainApplication().run(args);
         }
