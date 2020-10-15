@@ -1,3 +1,6 @@
+#dropwizard boilerplate
+This project serves as boilerplate for a docker image deployable to kubernetes
+
 # dropwizard-gui
 Example project using vue.js static content and dropwizard
 
