@@ -1,3 +1,16 @@
 #!/usr/bin/bash
 
-java -jar target/dropwizard-features-1.0.0.jar server config/config.yaml
+JAVA_OPTS="-Djavax.net.ssl.sessionCacheSize=10000 -server"
+
+# Setting Max Heap memory based on pod's available memory
+JAVA_OPTS="${JAVA_OPTS} -XX:MaxRAMPercentage=80.0"
+
+# debugging options.
+#JAVA_OPTS="${JAVA_OPTS} -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006"
+
+#echo ${JAVA_OPTS}
+
+exec java ${JAVA_OPTS} \
+  -cp java-app.jar:lib/* \
+  com.sgarc57.java.dropwizard.MainApplication \
+  server config/config.yaml

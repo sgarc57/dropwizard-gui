@@ -5,6 +5,8 @@ WORKDIR ${APP}
 
 COPY target ${APP}
 
+COPY config ${APP}/config
+
 COPY start.sh ${APP}
 
 COPY example.keystore ${APP}
