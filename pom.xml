@@ -32,7 +32,7 @@
         <jakarta.validation.version>3.0.0</jakarta.validation.version>
         <javax.validation.version>2.0.1.Final</javax.validation.version>
         <java.io.tempdir>target</java.io.tempdir>
-        <h2.version>1.4.200</h2.version>
+        <h2.version>2.1.210</h2.version>
     </properties>
 
     <dependencies>
